@@ -95,7 +95,6 @@ class ViewController: UIViewController, ARSessionDelegate {
     func resetTracking() {
         guard ARFaceTrackingConfiguration.isSupported else { return }
         let configuration = ARFaceTrackingConfiguration()
-        configuration.isLightEstimationEnabled = true
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
     }
     
